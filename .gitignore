@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/
+results/week2/acc_test.npz
+synth/**/*.jou
+synth/**/*.log
+synth/**/.Xil/
+synth/**/*.runs/
+synth/**/*.cache/
+.vscode/

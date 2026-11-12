@@ -1,0 +1,26 @@
+MNIST: train (60000, 784), test (10000, 784)
+Training float MLP [784, 256, 128, 10] ...
+  epoch  1/12  loss 0.2643
+  epoch  2/12  loss 0.0976
+  epoch  3/12  loss 0.0633
+  epoch  4/12  loss 0.0440
+  epoch  5/12  loss 0.0333
+  epoch  6/12  loss 0.0247
+  epoch  7/12  loss 0.0197
+  epoch  8/12  loss 0.0174
+  epoch  9/12  loss 0.0129
+  epoch 10/12  loss 0.0043
+  epoch 11/12  loss 0.0025
+  epoch 12/12  loss 0.0019
+  done in 13 s, float test accuracy 0.9833
+Quantizing (int8 weights per-channel, uint8 activations) ...
+  int8 test accuracy 0.9833  (float 0.9833, drop 0.00 points)
+MLP [784, 256, 128, 10], ReLU, NumPy Adam, 12 epochs, batch 128, lr 0.001, seed 5609
+Float test accuracy : 0.9833
+Int8  test accuracy : 0.9833
+Quantization: int8 weights [-127,127] per output neuron; uint8 activations [0,255]; hidden scales = 99.99 percentile of ReLU output / 255
+
+fc1: K= 784 N= 256  |w| mean  27.27  zeros   1.2%  s_in 3.922e-03  s_out 2.205e-02
+fc2: K= 256 N= 128  |w| mean  32.23  zeros   1.0%  s_in 2.205e-02  s_out 4.132e-02
+fc3: K= 128 N=  10  |w| mean  37.37  zeros   0.9%  s_in 4.132e-02
+Saved /home/tihandc/ee5609/model/mlp_float.npz, /home/tihandc/ee5609/model/mlp_int8.npz, /home/tihandc/ee5609/results/week2/model_summary.txt

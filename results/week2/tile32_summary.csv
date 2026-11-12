@@ -1,0 +1,4 @@
+layer,K,N,n_tiles,bits_datatype,bits_sira,bits_gauss_dot_1e15,bits_gauss_dot_1e9,bits_emp_test
+fc1,32,256,25,21,20,20,20,20
+fc2,32,128,8,21,20,19,18,18
+fc3,32,10,4,21,20,19,19,18

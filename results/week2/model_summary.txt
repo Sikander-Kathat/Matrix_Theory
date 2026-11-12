@@ -1,0 +1,8 @@
+MLP [784, 256, 128, 10], ReLU, NumPy Adam, 12 epochs, batch 128, lr 0.001, seed 5609
+Float test accuracy : 0.9833
+Int8  test accuracy : 0.9833
+Quantization: int8 weights [-127,127] per output neuron; uint8 activations [0,255]; hidden scales = 99.99 percentile of ReLU output / 255
+
+fc1: K= 784 N= 256  |w| mean  27.27  zeros   1.2%  s_in 3.922e-03  s_out 2.205e-02
+fc2: K= 256 N= 128  |w| mean  32.23  zeros   1.0%  s_in 2.205e-02  s_out 4.132e-02
+fc3: K= 128 N=  10  |w| mean  37.37  zeros   0.9%  s_in 4.132e-02
