@@ -14,4 +14,9 @@ python model/week2_train_quantize.py | tee results/week2/train_log.txt
 echo "=== Week 2b: real accumulators, w^T Sigma w, bound ladder ==="
 python model/week2_accumulators.py | tee results/week2/analysis_log.txt
 
-echo "Done. Figures and tables are in results/week1 and results/week2."
+
+
+echo "=== Milestone 2: Tasks 1-3 (bit-true validation, accuracy, Gaussian reliability) ==="
+mkdir -p results/week3
+python model/week3_validation.py | tee results/week3/validation_log.txt
+echo "Done. Figures and tables are in results/week1, results/week2 and results/week3."

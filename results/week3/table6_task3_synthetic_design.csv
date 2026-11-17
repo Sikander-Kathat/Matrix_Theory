@@ -1,0 +1,4 @@
+scenario,observed_max_width,gaussian_width_1e9,bernstein_width_1e9,worst_case,bernstein_never_violated
+Uniform int8 (pessimistic),19,19,20,21,True
+Gaussian weights + ReLU,17,16,19,21,True
+Laplacian weights + ReLU,16,16,19,21,True

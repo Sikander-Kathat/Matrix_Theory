@@ -1,0 +1,10 @@
+layer,config,width_bits,dot_products,mac_operations,predicted_prob_per_dot,predicted_count,observed_final_overflows,observed_rate_95ci,observed_partial_sum_overflows,gaussian_verdict,images_affected,neurons_affected
+fc1,SIRA,24,2560000,2007040000,0,0,0,0 (95% upper bound 1.2e-06),0,overflow impossible (SIRA guarantee),0,0
+fc1,SIRA-1,23,2560000,2007040000,1.49e-154,3.81e-148,0,0 (95% upper bound 1.2e-06),0,not testable here (prediction below measurement floor),0,0
+fc1,SIRA-2,22,2560000,2007040000,5.30e-14,1.36e-07,0,0 (95% upper bound 1.2e-06),0,not testable here (prediction below measurement floor),0,0
+fc2,SIRA,22,1280000,327680000,0,0,0,0 (95% upper bound 2.3e-06),0,overflow impossible (SIRA guarantee),0,0
+fc2,SIRA-1,21,1280000,327680000,1.26e-109,1.61e-103,0,0 (95% upper bound 2.3e-06),0,not testable here (prediction below measurement floor),0,0
+fc2,SIRA-2,20,1280000,327680000,2.69e-30,3.45e-24,0,0 (95% upper bound 2.3e-06),0,not testable here (prediction below measurement floor),0,0
+fc3,SIRA,21,100000,12800000,0,0,0,0 (95% upper bound 3.0e-05),0,overflow impossible (SIRA guarantee),0,0
+fc3,SIRA-1,20,100000,12800000,1.72e-16,1.72e-11,0,0 (95% upper bound 3.0e-05),0,not testable here (prediction below measurement floor),0,0
+fc3,SIRA-2,19,100000,12800000,2.50e-05,2.5,0,0 (95% upper bound 3.0e-05),0,consistent,0,0

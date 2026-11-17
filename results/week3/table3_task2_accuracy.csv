@@ -1,0 +1,14 @@
+config,widths,mode,accuracy,mismatches,overflows
+Float rescaling (Week 2 reference),32/32/32,-,0.9833,0,-
+"Fixed-point, full width (baseline)",32/32/32,-,0.9833,0,0/0/0
+"Fixed-point, truncating rescale",32/32/32,-,0.9832,2,0/0/0
+Datatype bound,26/24/23,wrap,0.9833,0,0/0/0
+Datatype bound,26/24/23,saturate,0.9833,0,0/0/0
+SIRA,24/22/21,wrap,0.9833,0,0/0/0
+SIRA,24/22/21,saturate,0.9833,0,0/0/0
+Statistical (Gaussian model 1e-9),22/20/20,wrap,0.9833,0,0/0/0
+Statistical (Gaussian model 1e-9),22/20/20,saturate,0.9833,0,0/0/0
+SIRA-1 (all layers),23/21/20,wrap,0.9833,0,0/0/0
+SIRA-1 (all layers),23/21/20,saturate,0.9833,0,0/0/0
+SIRA-2 (all layers),22/20/19,wrap,0.9833,0,0/0/0
+SIRA-2 (all layers),22/20/19,saturate,0.9833,0,0/0/0

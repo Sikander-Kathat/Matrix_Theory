@@ -14,12 +14,16 @@ ee5609/
 │   ├── common.py                  paths, MNIST loader, bit helpers, exact integer MLP
 │   ├── week2_train_quantize.py    Week 2a: train MLP 784-256-128-10 (NumPy), quantize to int8
 │   ├── week2_accumulators.py      Week 2b: log accumulators, w^T Sigma w, bound ladder, figures
+│   ├── fixedpoint.py              bit-true datapath: wrap/saturate accumulator, integer rescaling
+│   ├── week3_validation.py        Milestone 2, Tasks 1-3: predicted vs observed overflow,
+│   │                              accuracy with reduced widths, Gaussian reliability
 │   ├── mlp_float.npz              trained float weights
 │   └── mlp_int8.npz               quantized model (int8 weights + scales)
 ├── data/mnist/                    the four MNIST .gz files (downloaded automatically if missing)
 ├── results/
 │   ├── week1/                     overflow-vs-width plot, CSV, log (2M trials)
-│   └── week2/                     figures (PNG + PDF), CSV tables, summary.md, acc_test.npz
+│   ├── week2/                     figures (PNG + PDF), CSV tables, summary.md, acc_test.npz
+│   └── week3/                     Milestone 2: tables (summary.md), findings.md, figures
 ├── rtl/  synth/                   Week 4 (Verilog MAC, Vivado/Yosys)
 └── report/                        LaTeX report
 ```
@@ -50,6 +54,7 @@ Or one step at a time:
 python montecarlo/week1_montecarlo.py --out results/week1   # ~10 s
 python model/week2_train_quantize.py                         # ~20 s
 python model/week2_accumulators.py                           # ~10 s
+python model/week3_validation.py                             # ~90 s
 ```
 
 The model is trained with plain NumPy and a fixed seed. On another machine,
